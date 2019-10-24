@@ -5,3 +5,25 @@ import org.jbpm.casemgmt.api.CaseService;
 import org.jbpm.casemgmt.api.model.instance.CaseFileInstance;
 import org.jbpm.document.Document;
 import org.jbpm.services.api.service.ServiceRegistry;
+
+rule "Testando o case file em drl"
+    ruleflow-group "benner.regulation:Teste_caseFile"
+    dialect "mvel"
+    when
+        $caseData : CaseFileInstance()
+        //$controle : controle()
+        //Document(name == "invalid.pdf") from $caseData.getData("hwSpec")
+        
+    then
+    	controle $controle = new controle();
+    	$controle.setSituacaoANS( "MUDANDO A SITUACAO" );
+		insert( pcontrole );
+		//update( pcontrole );
+		
+		System.out.println("Entrou no teste do caseFile");
+        System.out.println($caseData.getData())
+        System.out.println($caseData.getData("controle"))
+        System.out.println($controle.getSituacaoANS());
+    	
+    	
+end
