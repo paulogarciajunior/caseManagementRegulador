@@ -41,6 +41,12 @@
         </work-item-handler>
         <work-item-handler>
             <resolver>mvel</resolver>
+            <identifier>new org.jbpm.process.workitem.email.EmailWorkItemHandler("smtp-relay.sendinblue.com", "587", "paulo.garcia.junior@gmail.com", "UjME0kRKhS1n4IZP")</identifier>
+            <parameters/>
+            <name>Email</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
             <identifier>new org.jbpm.process.workitem.rest.RESTWorkItemHandler("wbadmin", "wbadmin")</identifier>
             <parameters/>
             <name>Rest</name>
