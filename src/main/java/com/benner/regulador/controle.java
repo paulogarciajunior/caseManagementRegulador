@@ -12,6 +12,8 @@ public class controle implements java.io.Serializable {
 	private java.lang.Boolean negativaBeneficiario;
 	private java.lang.Boolean negativaPrestador;
 
+	private java.lang.String descricao;
+
 	public controle() {
 	}
 
@@ -39,12 +41,21 @@ public class controle implements java.io.Serializable {
 		this.negativaPrestador = negativaPrestador;
 	}
 
+	public java.lang.String getDescricao() {
+		return this.descricao;
+	}
+
+	public void setDescricao(java.lang.String descricao) {
+		this.descricao = descricao;
+	}
+
 	public controle(java.lang.String situacaoANS,
 			java.lang.Boolean negativaBeneficiario,
-			java.lang.Boolean negativaPrestador) {
+			java.lang.Boolean negativaPrestador, java.lang.String descricao) {
 		this.situacaoANS = situacaoANS;
 		this.negativaBeneficiario = negativaBeneficiario;
 		this.negativaPrestador = negativaPrestador;
+		this.descricao = descricao;
 	}
 
 }
