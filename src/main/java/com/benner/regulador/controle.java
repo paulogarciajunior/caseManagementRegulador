@@ -6,12 +6,45 @@ package com.benner.regulador;
 
 public class controle implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public controle() {
-    }
+	private java.lang.String situacaoANS;
+	private java.lang.Boolean negativaBeneficiario;
+	private java.lang.Boolean negativaPrestador;
 
+	public controle() {
+	}
 
+	public java.lang.String getSituacaoANS() {
+		return this.situacaoANS;
+	}
 
+	public void setSituacaoANS(java.lang.String situacaoANS) {
+		this.situacaoANS = situacaoANS;
+	}
+
+	public java.lang.Boolean getNegativaBeneficiario() {
+		return this.negativaBeneficiario;
+	}
+
+	public void setNegativaBeneficiario(java.lang.Boolean negativaBeneficiario) {
+		this.negativaBeneficiario = negativaBeneficiario;
+	}
+
+	public java.lang.Boolean getNegativaPrestador() {
+		return this.negativaPrestador;
+	}
+
+	public void setNegativaPrestador(java.lang.Boolean negativaPrestador) {
+		this.negativaPrestador = negativaPrestador;
+	}
+
+	public controle(java.lang.String situacaoANS,
+			java.lang.Boolean negativaBeneficiario,
+			java.lang.Boolean negativaPrestador) {
+		this.situacaoANS = situacaoANS;
+		this.negativaBeneficiario = negativaBeneficiario;
+		this.negativaPrestador = negativaPrestador;
+	}
 
 }
