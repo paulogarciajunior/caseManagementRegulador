@@ -84,6 +84,25 @@
       <valueList>true, false</valueList>
       <update>false</update>
     </set-field-col52>
+    <org.drools.workbench.models.guided.dtable.shared.model.ActionWorkItemCol52>
+      <hideColumn>false</hideColumn>
+      <width>100</width>
+      <header>LOG</header>
+      <workItemDefinition>
+        <name>Log</name>
+        <displayName>Log</displayName>
+        <parameters>
+          <entry>
+            <string>Message</string>
+            <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+              <name>Message</name>
+              <value>ENTROU NA REGRA DE TABELA</value>
+            </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+          </entry>
+        </parameters>
+        <results/>
+      </workItemDefinition>
+    </org.drools.workbench.models.guided.dtable.shared.model.ActionWorkItemCol52>
   </actionCols>
   <auditLog>
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
@@ -149,6 +168,12 @@
       <value>
         <valueString>false</valueString>
         <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
     </list>
