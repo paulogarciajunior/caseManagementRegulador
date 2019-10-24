@@ -16,7 +16,7 @@ rule "Testando o case file em drl"
         
     then
     	controle $controle = new controle();
-    	$controle.setSituacaoANS( "MUDANDO A SITUACAO" );
+    	$controle.setSituacaoANS( "EM ANALISE" );
 		insert( $controle );
 		//update( pcontrole );
 		
