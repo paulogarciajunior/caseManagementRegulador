@@ -18,7 +18,7 @@ rule "Testando o case file em drl"
     	controle $controle = new controle();
     	$controle.setSituacaoANS( "EM ANALISE" );
         $controle.setNegativaBeneficiario(false);
-        //$controle.setNegativaPrestador(false);
+        $controle.setNegativaPrestador(false);
         //$controle.setDescricao("ESTOU MUDANDO TUDO");
 		//insert( $controle );
 		//update( $controle );
