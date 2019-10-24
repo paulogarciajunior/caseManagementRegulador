@@ -103,21 +103,21 @@
             <string>To</string>
             <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
               <name>To</name>
-              <value>TESTE DO CASE MANAGEMENT</value>
+              <value>paulo@triopropaganda.com</value>
             </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
           </entry>
           <entry>
             <string>Body</string>
             <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
               <name>Body</name>
-              <value>teste</value>
+              <value>TESTE DO CASE MANAGEMENT</value>
             </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
           </entry>
           <entry>
             <string>Subject</string>
             <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
               <name>Subject</name>
-              <value>teste</value>
+              <value>TESTE DO CASE MANAGEMENT</value>
             </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
           </entry>
         </parameters>
