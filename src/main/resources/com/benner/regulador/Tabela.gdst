@@ -96,7 +96,7 @@
             <string>Message</string>
             <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
               <name>Message</name>
-              <value>ENTROU NA REGRA DE TABELA</value>
+              <value>TESTE DE TABELA</value>
             </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
           </entry>
         </parameters>
