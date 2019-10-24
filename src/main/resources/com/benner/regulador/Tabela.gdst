@@ -89,14 +89,35 @@
       <width>100</width>
       <header>LOG</header>
       <workItemDefinition>
-        <name>Log</name>
-        <displayName>Log</displayName>
+        <name>Email</name>
+        <displayName>Email</displayName>
         <parameters>
           <entry>
-            <string>Message</string>
+            <string>From</string>
             <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
-              <name>Message</name>
-              <value>TESTE DE TABELA</value>
+              <name>From</name>
+              <value>jbpm@neobe.com.br</value>
+            </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+          </entry>
+          <entry>
+            <string>To</string>
+            <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+              <name>To</name>
+              <value>TESTE DO CASE MANAGEMENT</value>
+            </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+          </entry>
+          <entry>
+            <string>Body</string>
+            <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+              <name>Body</name>
+              <value>teste</value>
+            </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+          </entry>
+          <entry>
+            <string>Subject</string>
+            <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+              <name>Subject</name>
+              <value>teste</value>
             </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
           </entry>
         </parameters>
