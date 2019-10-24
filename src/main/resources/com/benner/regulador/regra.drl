@@ -17,7 +17,7 @@ rule "Testando o case file em drl"
     then
     	controle $controle = new controle();
     	$controle.setSituacaoANS( "MUDANDO A SITUACAO" );
-		insert( pcontrole );
+		insert( $controle );
 		//update( pcontrole );
 		
 		System.out.println("Entrou no teste do caseFile");
