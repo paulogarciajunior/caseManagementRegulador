@@ -7,7 +7,7 @@ import org.jbpm.document.Document;
 import org.jbpm.services.api.service.ServiceRegistry;
 
 rule "Testando o case file em drl"
-    ruleflow-group "benner.regulation:Teste_caseFile"
+    ruleflow-group "@@@-case-@@@"
     dialect "mvel"
     when
         $caseData : CaseFileInstance()
