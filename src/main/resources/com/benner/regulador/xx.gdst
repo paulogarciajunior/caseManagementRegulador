@@ -100,28 +100,28 @@ System.out.println($controle.getNome());</text>
             <string>From</string>
             <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
               <name>From</name>
-              <value>caseFile_emailFrom</value>
+              <value>#{caseFile_emailFrom}</value>
             </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
           </entry>
           <entry>
             <string>To</string>
             <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
               <name>To</name>
-              <value>caseFile_emailTo</value>
+              <value>#{caseFile_emailTo}</value>
             </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
           </entry>
           <entry>
             <string>Body</string>
             <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
               <name>Body</name>
-              <value>caseFile_emailBody</value>
+              <value>#{caseFile_emailBody}</value>
             </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
           </entry>
           <entry>
             <string>Subject</string>
             <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
               <name>Subject</name>
-              <value>caseFile_emailSubject</value>
+              <value>#{caseFile_emailSubject}</value>
             </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
           </entry>
         </parameters>
