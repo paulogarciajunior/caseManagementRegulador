@@ -17,7 +17,7 @@ rule "Testando o case file em drl"
         //$controle : controle()
         //Document(name == "invalid.pdf") from $caseData.getData("hwSpec")
        $controle: controle() from $caseData.getData("controle")
-       $solicitante: controle() from $caseData.getData("solicitante")
+       $solicitante: solicitante() from $caseData.getData("solicitante")
         
     then
     	System.out.println("Entrou no teste do caseFile");
