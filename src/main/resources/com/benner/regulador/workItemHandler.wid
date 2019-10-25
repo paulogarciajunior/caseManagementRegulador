@@ -1,17 +1,5 @@
 [
   [
-    "name" : "Email",
-    "parameters" : [
-      "From" : new StringDataType(),
-      "To" : new StringDataType(),
-      "Subject" : new StringDataType(),
-      "Body" : new StringDataType()
-    ],
-    "displayName" : "Email",
-    "icon" : "defaultemailicon.gif"
-  ],
-
-  [
     "name" : "Log",
     "parameters" : [
       "Message" : new StringDataType()
