@@ -10,7 +10,7 @@ import org.kie.api.runtime.process.CaseData;
 
 
 rule "Testando o case file em drl"
-    ruleflow-group "rgr:Regulador.Staring"
+    ruleflow-group "rgr:Regulador.Starting"
     dialect "mvel"
     when
         $caseData : CaseFileInstance()
