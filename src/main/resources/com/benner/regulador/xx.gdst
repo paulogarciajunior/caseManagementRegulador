@@ -36,7 +36,7 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>100</width>
+          <width>178</width>
           <header>SIT</header>
           <constraintValueType>1</constraintValueType>
           <factField>situacaoANS</factField>
@@ -88,6 +88,46 @@ System.out.println($controle.getNome());</text>
         </org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
       </childColumns>
     </org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
+    <org.drools.workbench.models.guided.dtable.shared.model.ActionWorkItemCol52>
+      <hideColumn>false</hideColumn>
+      <width>100</width>
+      <header>email</header>
+      <workItemDefinition>
+        <name>Email</name>
+        <displayName>Email</displayName>
+        <parameters>
+          <entry>
+            <string>From</string>
+            <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+              <name>From</name>
+              <value>caseFile_emailFrom</value>
+            </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+          </entry>
+          <entry>
+            <string>To</string>
+            <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+              <name>To</name>
+              <value>caseFile_emailTo</value>
+            </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+          </entry>
+          <entry>
+            <string>Body</string>
+            <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+              <name>Body</name>
+              <value>caseFile_emailBody</value>
+            </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+          </entry>
+          <entry>
+            <string>Subject</string>
+            <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+              <name>Subject</name>
+              <value>caseFile_emailSubject</value>
+            </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
+          </entry>
+        </parameters>
+        <results/>
+      </workItemDefinition>
+    </org.drools.workbench.models.guided.dtable.shared.model.ActionWorkItemCol52>
   </actionCols>
   <auditLog>
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
@@ -148,6 +188,12 @@ System.out.println($controle.getNome());</text>
       <value>
         <valueString>TRIO PROPAGANDA.COM.BR</valueString>
         <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
