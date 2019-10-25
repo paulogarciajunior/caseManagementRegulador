@@ -13,15 +13,10 @@ rule "Testando o case file em drl"
         $caseData : CaseFileInstance()
         //$controle : controle()
         //Document(name == "invalid.pdf") from $caseData.getData("hwSpec")
+        $controle: controle() from $caseData.getData("controle")
         
     then
-    	controle $controle = new controle();
-    	$controle.setSituacaoANS( "EM ANALISE" );
-        $controle.setNegativaBeneficiario(false);
-        $controle.setNegativaPrestador(false);
-        $controle.setNome("PAULO GARCIA JUNIOR");
-		insert( $controle );
-		update( $controle );
+    	update( $controle );
 		System.out.println("Entrou no teste do caseFile");
         System.out.println($caseData.getData());
         System.out.println($caseData.getData("controle"));
