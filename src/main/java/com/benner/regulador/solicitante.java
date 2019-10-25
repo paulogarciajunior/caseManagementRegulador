@@ -8,10 +8,10 @@ public class solicitante implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Nome")
+	@org.kie.api.definition.type.Label("Nome")
 	private java.lang.String nome;
 	@org.kie.api.definition.type.Label(value = "Email")
-	private java.lang.String email;
+	private java.lang.String solicitanteEmail;
 
 	public solicitante() {
 	}
@@ -24,17 +24,17 @@ public class solicitante implements java.io.Serializable {
 		this.nome = nome;
 	}
 
-	public java.lang.String getEmail() {
-		return this.email;
+	public java.lang.String getSolicitanteEmail() {
+		return this.solicitanteEmail;
 	}
 
-	public void setEmail(java.lang.String email) {
-		this.email = email;
+	public void setSolicitanteEmail(java.lang.String solicitanteEmail) {
+		this.solicitanteEmail = solicitanteEmail;
 	}
 
-	public solicitante(java.lang.String nome, java.lang.String email) {
+	public solicitante(java.lang.String nome, java.lang.String solicitanteEmail) {
 		this.nome = nome;
-		this.email = email;
+		this.solicitanteEmail = solicitanteEmail;
 	}
 
 }
