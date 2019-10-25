@@ -1,14 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:drools="http://www.jboss.org/drools" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color"  
-id="Definition" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes"> 
-   <bpmn2:itemDefinition id="_milestone_TaskNameInputXItem" structureRef="String"/>
-   <bpmn2:itemDefinition id="_milestone_ConditionInputXItem" structureRef="Object"/>
-   <bpmn2:process id="com.benner.regulador.Regular" drools:packageName="com.benner.regulador" drools:version="1.0" drools:adHoc="true" name="" isExecutable="true"> 
-     <bpmn2:extensionElements>
-       <drools:metaData name="customCaseIdPrefix">
-         <drools:metaValue>REG</drools:metaValue>
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:drools="http://www.jboss.org/drools" id="_0XizMfcwEemYVo1ZnwEzsw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+  <bpmn2:itemDefinition id="_caseFile_autorizadoItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_caseFile_controleItem" structureRef="com.benner.regulador.controle"/>
+  <bpmn2:itemDefinition id="__milestoneTask_TaskNameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__milestoneTask_ConditionInputXItem" structureRef="Object"/>
+  <bpmn2:process id="com.benner.regulador.Regular" drools:adHoc="true" drools:packageName="com.benner.regulador" drools:version="1.0" name="Regular" isExecutable="true">
+    <bpmn2:extensionElements>
+      <drools:metaData name="customCaseIdPrefix">
+        <drools:metaValue><![CDATA[REG]]></drools:metaValue>
       </drools:metaData>
-     </bpmn2:extensionElements><bpmn2:task id="_milestoneTask" drools:selectable="true" drools:taskName="Milestone" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Milestone">
+      <drools:metaData name="customCaseRoles">
+        <drools:metaValue><![CDATA[owner:1]]></drools:metaValue>
+      </drools:metaData>
+      <drools:import name="com.benner.regulador.controle"/>
+    </bpmn2:extensionElements>
+    <bpmn2:property id="caseFile_autorizado" itemSubjectRef="_caseFile_autorizadoItem"/>
+    <bpmn2:property id="caseFile_controle" itemSubjectRef="_caseFile_controleItem"/>
+    <bpmn2:task id="_milestoneTask" drools:selectable="true" drools:taskName="Milestone" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Milestone">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
           <drools:metaValue><![CDATA[Milestone]]></drools:metaValue>
@@ -17,36 +25,59 @@ id="Definition" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL 
           <drools:metaValue><![CDATA[true]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:ioSpecification id="_milestoneIoSpecification">
-        <bpmn2:dataInput id="_milestone_TaskNameInputX" drools:dtype="String" itemSubjectRef="_milestone_TaskNameInputXItem" name="TaskName"/>
-        <bpmn2:dataInput id="_milestone_ConditionInputX" drools:dtype="String" itemSubjectRef="_milestone_ConditionInputXItem" name="Condition"/>
-        <bpmn2:inputSet id="_milestoneInputSet">
-          <bpmn2:dataInputRefs>_milestone_ConditionInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_milestone_TaskNameInputX</bpmn2:dataInputRefs>
+      <bpmn2:ioSpecification id="_0XmdkPcwEemYVo1ZnwEzsw">
+        <bpmn2:dataInput id="_milestoneTask_TaskNameInputX" drools:dtype="String" itemSubjectRef="__milestoneTask_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="_milestoneTask_ConditionInputX" drools:dtype="Object" itemSubjectRef="__milestoneTask_ConditionInputXItem" name="Condition"/>
+        <bpmn2:inputSet id="_0XmdkfcwEemYVo1ZnwEzsw">
+          <bpmn2:dataInputRefs>_milestoneTask_ConditionInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_milestoneTask_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_milestoneOutputSet"/>
+        <bpmn2:outputSet id="_0XmdkvcwEemYVo1ZnwEzsw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_milestoneDataInputAssociation">
-        <bpmn2:targetRef>_milestone_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_milestoneAssignment">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_milestoneExpressionFrom"><![CDATA[Milestone]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_milestoneExpressionTo">_milestone_TaskNameInputX</bpmn2:to>
+      <bpmn2:dataInputAssociation id="_0Xmdk_cwEemYVo1ZnwEzsw">
+        <bpmn2:targetRef>_milestoneTask_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_0XmdlPcwEemYVo1ZnwEzsw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_0XmdlfcwEemYVo1ZnwEzsw"><![CDATA[Milestone]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_0XmdlvcwEemYVo1ZnwEzsw">_milestoneTask_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_milestoneDataInputAssociation2">
-        <bpmn2:targetRef>_milestone_ConditionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_milestoneAssignment2">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_milestoneExpressionFrom2"><![CDATA[]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_milestoneExpressionTo2">_milestone_ConditionInputX</bpmn2:to>
+      <bpmn2:dataInputAssociation id="_0Xmdl_cwEemYVo1ZnwEzsw">
+        <bpmn2:targetRef>_milestoneTask_ConditionInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_0XmdmPcwEemYVo1ZnwEzsw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_0XmdmfcwEemYVo1ZnwEzsw"></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_0XmdmvcwEemYVo1ZnwEzsw">_milestoneTask_ConditionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:task>
-   </bpmn2:process> 
-   <bpmndi:BPMNDiagram> 
-      <bpmndi:BPMNPlane bpmnElement="com.benner.regulador.Regular"> 
-         <bpmndi:BPMNShape bpmnElement="_milestoneTask"> 
-            <dc:Bounds height="80.0" width="100.0" x="90.0" y="90.0"/> 
-         </bpmndi:BPMNShape> 
-      </bpmndi:BPMNPlane> 
-   </bpmndi:BPMNDiagram> 
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_0Xmdm_cwEemYVo1ZnwEzsw">
+    <bpmndi:BPMNPlane id="_0XmdnPcwEemYVo1ZnwEzsw" bpmnElement="com.benner.regulador.Regular">
+      <bpmndi:BPMNShape id="_0XnEoPcwEemYVo1ZnwEzsw" bpmnElement="_milestoneTask">
+        <dc:Bounds height="80.0" width="100.0" x="90.0" y="90.0"/>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship id="_0XnEofcwEemYVo1ZnwEzsw" type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_milestoneTask" id="_0XnEovcwEemYVo1ZnwEzsw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_0XizMfcwEemYVo1ZnwEzsw</bpmn2:source>
+    <bpmn2:target>_0XizMfcwEemYVo1ZnwEzsw</bpmn2:target>
+  </bpmn2:relationship>
 </bpmn2:definitions>
