@@ -10,7 +10,7 @@ import org.kie.api.runtime.process.CaseData;
 
 
 rule "Testando o case file em drl"
-    ruleflow-group "@@@-case-@@@"
+    ruleflow-group "rgr:Regulador.Staring"
     dialect "mvel"
     when
         $caseData : CaseFileInstance()
@@ -23,7 +23,7 @@ rule "Testando o case file em drl"
     	System.out.println("Entrou no teste do caseFile");
         System.out.println($caseData.getData());
         System.out.println($controle.getNome());
-        System.out.println($solicitante.getEmail());
+        System.out.println($solicitante.getSolicitanteEmail());
     	
     	
 end
