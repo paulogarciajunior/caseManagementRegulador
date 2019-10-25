@@ -6,12 +6,35 @@ package com.benner.regulador;
 
 public class solicitante implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public solicitante() {
-    }
+	@org.kie.api.definition.type.Label(value = "Nome")
+	private java.lang.String nome;
+	@org.kie.api.definition.type.Label(value = "Email")
+	private java.lang.String email;
 
+	public solicitante() {
+	}
 
+	public java.lang.String getNome() {
+		return this.nome;
+	}
 
+	public void setNome(java.lang.String nome) {
+		this.nome = nome;
+	}
+
+	public java.lang.String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(java.lang.String email) {
+		this.email = email;
+	}
+
+	public solicitante(java.lang.String nome, java.lang.String email) {
+		this.nome = nome;
+		this.email = email;
+	}
 
 }
