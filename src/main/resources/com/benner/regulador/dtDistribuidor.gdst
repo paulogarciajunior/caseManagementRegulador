@@ -74,8 +74,8 @@
       <header>PRINT</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>System.out.println(&quot;EXECUTOU A TABELA DE DECISAO&quot;);
-System.out.println(&quot;DESCRICAO:&quot;+$controle.getNome());</text>
+          <text>System.out.println(&quot;REGULACAO in progress...&quot;);
+System.out.println(&quot;\tDESCRICAO:&quot;+$controle.getNome());</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
