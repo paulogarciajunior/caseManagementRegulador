@@ -37,7 +37,7 @@
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>Sit</header>
+          <header>SIT</header>
           <constraintValueType>1</constraintValueType>
           <factField>situacaoANS</factField>
           <fieldType>String</fieldType>
@@ -50,7 +50,7 @@
       <window>
         <parameters/>
       </window>
-      <entryPointName>caseFile_controle</entryPointName>
+      <entryPointName></entryPointName>
     </Pattern52>
   </conditionPatterns>
   <actionCols>
@@ -62,7 +62,7 @@
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
       <width>100</width>
-      <header>Nome</header>
+      <header>NOME</header>
       <boundName>$controle</boundName>
       <factField>nome</factField>
       <type>String</type>
@@ -102,34 +102,5 @@
   <packageName>com.benner.regulador</packageName>
   <tableFormat>EXTENDED_ENTRY</tableFormat>
   <hitPolicy>NONE</hitPolicy>
-  <data>
-    <list>
-      <value>
-        <valueNumeric class="int">1</valueNumeric>
-        <valueString></valueString>
-        <dataType>NUMERIC_INTEGER</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueString>ANALISANDO</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueString>@@@TABELA_DECISAO_GUIADA@@@</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueString>EM ANALISE</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueString>ENTREI NA OPCAO: EM ANALISE</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-    </list>
-  </data>
+  <data/>
 </decision-table52>
