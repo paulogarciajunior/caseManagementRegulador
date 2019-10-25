@@ -20,10 +20,11 @@ rule "Testando o case file em drl"
        $solicitante: solicitante() from $caseData.getData("solicitante")
         
     then
-    	System.out.println("Entrou no teste do caseFile");
-        System.out.println($caseData.getData());
-        System.out.println($controle.getNome());
-        System.out.println($solicitante.getSolicitanteEmail());
+    	System.out.println("REGULACAO starting...");
+        System.out.println("\t"+$caseData.getCaseId());
+        //System.out.println($caseData.getData());
+        System.out.println("INPUT DESCRICAO"+$controle.getNome());
+        System.out.println("INPUT EMAIL"+$solicitante.getSolicitanteEmail());
     	
     	
 end
