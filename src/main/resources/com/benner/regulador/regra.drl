@@ -23,8 +23,8 @@ rule "Testando o case file em drl"
     	System.out.println("REGULACAO starting...");
         System.out.println("\t"+$caseData.getCaseId());
         //System.out.println($caseData.getData());
-        System.out.println("INPUT DESCRICAO"+$controle.getNome());
-        System.out.println("INPUT EMAIL"+$solicitante.getSolicitanteEmail());
+        System.out.println("\tINPUT DESCRICAO:"+$controle.getNome());
+        System.out.println("\tINPUT EMAIL:"+$solicitante.getSolicitanteEmail());
     	
     	
 end
