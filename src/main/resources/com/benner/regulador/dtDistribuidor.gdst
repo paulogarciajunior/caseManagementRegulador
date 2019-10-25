@@ -12,7 +12,7 @@
   <attributeCols>
     <attribute-column52>
       <typedDefaultValue>
-        <valueString>@@TABELA@@@</valueString>
+        <valueString>regraDistribuidorRegulador</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
@@ -171,7 +171,7 @@ System.out.println($controle.getNome());</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>MUDAR PARA TRIO</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -186,18 +186,18 @@ System.out.println($controle.getNome());</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>TRIO PROPAGANDA.COM.BR</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>true</valueBoolean>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>true</valueBoolean>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
