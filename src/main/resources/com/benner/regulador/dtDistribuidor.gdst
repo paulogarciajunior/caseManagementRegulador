@@ -121,7 +121,7 @@ System.out.println(&quot;\tDESCRICAO:&quot;+$controle.getNome());</text>
             <string>Subject</string>
             <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
               <name>Subject</name>
-              <value>CASE MANAGEMENTE</value>
+              <value>CASE MANAGEMENTE - V0</value>
             </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
           </entry>
         </parameters>
