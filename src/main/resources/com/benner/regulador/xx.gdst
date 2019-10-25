@@ -61,7 +61,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>227</width>
       <header>NOME</header>
       <boundName>$controle</boundName>
       <factField>nome</factField>
@@ -74,7 +74,7 @@
       <header>PRINT</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>System.out.println(&quot;EXECUTOU A TABELA DE DESCISAO&quot;);
+          <text>System.out.println(&quot;EXECUTOU A TABELA DE DECISAO&quot;);
 System.out.println($controle.getNome());</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
