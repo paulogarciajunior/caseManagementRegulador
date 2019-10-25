@@ -12,7 +12,7 @@
   <attributeCols>
     <attribute-column52>
       <typedDefaultValue>
-        <valueString>rga:Distribuidor.Regulador</valueString>
+        <valueString>rgr:Distribuidor.Regulador</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
@@ -176,7 +176,7 @@ System.out.println($controle.getNome());</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>rga:Distribuidor.Regulador</valueString>
+        <valueString>rgr:Distribuidor.Regulador</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
