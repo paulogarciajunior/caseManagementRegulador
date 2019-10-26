@@ -107,7 +107,7 @@ System.out.println(&quot;\tDESCRICAO:&quot;+$controle.getNome());</text>
             <string>To</string>
             <org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
               <name>To</name>
-              <value>paulo@triopropaganda.com,edilson.shiba@benner.com.br,leandro.lonardoni@benner.com.br, cleber.mario@benner.com.br</value>
+              <value>paulo@triopropaganda.com</value>
             </org.drools.workbench.models.datamodel.workitems.PortableStringParameterDefinition>
           </entry>
           <entry>
