@@ -13,6 +13,7 @@ import org.kie.api.runtime.process.WorkflowProcessInstance;
 rule "Testando o case file em drl"
     ruleflow-group "rgr:Regulador.Starting"
     dialect "mvel"
+    no-loop
     when
     	$processInstance: WorkflowProcessInstance()
         $caseData : CaseFileInstance()
