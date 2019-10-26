@@ -31,3 +31,16 @@ rule "Testando o case file em drl"
     	
     	
 end
+
+
+rule "Encerrando / fechando um CASE"
+    ruleflow-group "Regulador:fechamentoCase"
+    dialect "mvel"
+    when
+        $caseData : CaseFileInstance()
+        $caseData.getData("hwSpec")=="FINALIZADO"
+    then:
+        //closeCase(String caseId, String comment) throws CaseNotFoundException;
+        CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE);
+        //caseService.triggerAdHocFragment($caseData.getCaseId(), "_620B0E74-D6EF-4746-9BCD-E9BF73AFC37D", "Order new Drugs", null);
+        caseService.closeCase(caseId,"fechado com sucesso");
