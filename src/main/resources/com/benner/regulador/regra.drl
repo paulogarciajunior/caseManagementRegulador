@@ -6,6 +6,7 @@ import org.jbpm.casemgmt.api.model.instance.CaseFileInstance;
 import org.jbpm.document.Document;
 import org.jbpm.services.api.service.ServiceRegistry;
 import org.kie.api.runtime.process.CaseData;
+import org.kie.api.runtime.process.WorkflowProcessInstance;
 
 
 
@@ -13,6 +14,7 @@ rule "Testando o case file em drl"
     ruleflow-group "rgr:Regulador.Starting"
     dialect "mvel"
     when
+    	$processInstance: WorkflowProcessInstance()
         $caseData : CaseFileInstance()
         //$controle : controle()
         //Document(name == "invalid.pdf") from $caseData.getData("hwSpec")
@@ -25,6 +27,12 @@ rule "Testando o case file em drl"
         //System.out.println($caseData.getData());
         System.out.println("\tINPUT DESCRICAO:"+$controle.getNome());
         System.out.println("\tINPUT EMAIL:"+$solicitante.getSolicitanteEmail());
+
+
+        $processInstance.setVariable("emailTo","luiza.garcia@triopropaganda.com"));
+        retract($processInstance);	    
+        System.out.println("\tINPUT EMAIL:"+ caseFile_emailTo.get();
+        
     	
     	
 end
