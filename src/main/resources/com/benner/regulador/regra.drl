@@ -38,7 +38,7 @@ rule "Testando o case file em drl"
         
         $p.setVariable("caseFile_emailTo","luiza.garcia@triopropaganda.com");;
         
-        retract($processInstance);
+        //retract($processInstance);
     
         $solicitante.setNome("CLINICA CARLOS GOMES")
         $solicitante.setSolicitanteEmail("contato@clinicacarlosgomes.com.br")
