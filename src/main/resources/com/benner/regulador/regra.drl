@@ -63,6 +63,7 @@ rule "Closing the case"
         System.out.println("###FECHANDO O CASO:"+$caseData.getCaseId);
         //closeCase(String caseId, String comment) throws CaseNotFoundException;
         CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE);
-        CaseService.closeCase($caseData.getCaseId(),"CLOSED")
+        //CaseService.closeCase($caseData.getCaseId(),"CLOSED")
+        CaseService.closeCase("REG-0000000006","CLOSED")
 end
         
