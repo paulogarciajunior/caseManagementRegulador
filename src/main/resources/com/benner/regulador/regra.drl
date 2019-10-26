@@ -32,7 +32,7 @@ rule "Testando o case file em drl"
 
         WorkflowProcessInstance $p = (WorkflowProcessInstance)kcontext.getKieRuntime().getProcessInstance($processInstance.getId()); //casting to WorkflowProcessInstance is essential
         
-        $p.setVariable("emailTo","luiza.garcia@triopropaganda.com");;
+        $p.setVariable("caseFile_emailTo","luiza.garcia@triopropaganda.com");;
         
         retract($processInstance);
 
