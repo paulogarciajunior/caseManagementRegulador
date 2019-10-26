@@ -28,6 +28,10 @@ rule "Testando o case file em drl"
         System.out.println("\tINPUT DESCRICAO:"+$controle.getNome());
         //System.out.println("\tINPUT EMAIL:"+$solicitante.getSolicitanteEmail());
         System.out.println("\tINPUT EMAIL:"+ $caseData.getData("emailTo"));
+        
+        System.out.println("\tSOLICITANTE:");
+        System.out.println("\t\tNOME:"+ $solicitante.getNome());
+        System.out.println("\t\tEMAIL:"+ $solicitante.getSolicitanteEmail());
 
 
         WorkflowProcessInstance $p = (WorkflowProcessInstance)kcontext.getKieRuntime().getProcessInstance($processInstance.getId()); //casting to WorkflowProcessInstance is essential
@@ -35,6 +39,14 @@ rule "Testando o case file em drl"
         $p.setVariable("caseFile_emailTo","luiza.garcia@triopropaganda.com");;
         
         retract($processInstance);
+    
+        $solicitante.setNome("CLINICA CARLOS GOMES")
+        $solicitante.setSolicitanteEmail("contato@clinicacarlosgomes.com.br")
+
+        System.out.println("\tSOLICITANTE ALTERADO:");
+        System.out.println("\t\tNOME:"+ $solicitante.getNome());
+        System.out.println("\t\tEMAIL:"+ $solicitante.getSolicitanteEmail());
+
 
         System.out.println("\tOUTPUT EMAIL:"+ $caseData.getData("emailTo"));
         
