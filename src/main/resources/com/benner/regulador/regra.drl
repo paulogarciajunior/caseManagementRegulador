@@ -7,18 +7,23 @@ import org.jbpm.document.Document;
 import org.jbpm.services.api.service.ServiceRegistry;
 import org.kie.api.runtime.process.CaseData;
 
+import org.kie.api.runtime.process.WorkflowProcessInstance;
 
 
 rule "Testando o case file em drl"
     ruleflow-group "@@@-case-@@@"
     dialect "mvel"
     when
+	    $processInstance: WorkflowProcessInstance()
         $caseData : CaseFileInstance()
         //$controle : controle()
         //Document(name == "invalid.pdf") from $caseData.getData("hwSpec")
         $controle: controle() from $caseData.getData("controle")
         
     then
+        //$controle.setProcess_id($processInstance.getId());
+        $processInstance.setVariable("emailTo","luiza.garcia@triopropaganda.com")
+        retract($processInstance);	    
     	System.out.println("Entrou no teste do caseFile");
         System.out.println($caseData.getData());
         System.out.println($caseData.getData("controle"));
