@@ -9,6 +9,18 @@ import org.kie.api.runtime.process.CaseData;
 import org.kie.api.runtime.process.WorkflowProcessInstance;
 
 
+package com.neobe.bto;
+import org.kie.api.runtime.process.WorkflowProcessInstance;
+rule "atribuicao-automatica"
+    enabled true
+    ruleflow-group "dynamic-group"
+    dialect "mvel"
+    when
+        	$process : WorkflowProcessInstance( )
+    then
+end
+
+
 
 rule "Testando o case file em drl"
     ruleflow-group "rgr:Regulador.Starting"
@@ -29,8 +41,12 @@ rule "Testando o case file em drl"
         System.out.println("\tINPUT EMAIL:"+$solicitante.getSolicitanteEmail());
 
 
-        $processInstance.setVariable("emailTo","luiza.garcia@triopropaganda.com");
-        retract($processInstance);	    
+        WorkflowProcessInstance $p = (WorkflowProcessInstance)kcontext.getKieRuntime().getProcessInstance($processInstance.getId()); //casting to WorkflowProcessInstance is essential
+        
+        $p.setVariable("emailTo","luiza.garcia@triopropaganda.com");;
+        
+        retract($processInstance);
+
         System.out.println("\tOUTPUT EMAIL:"+ $caseData.getData("emailto"));
         
     	
