@@ -58,12 +58,9 @@ rule "Closing the case"
     dialect "mvel"
     no-loop true
     when
-    	//$processInstance: WorkflowProcessInstance()
         $caseData : CaseFileInstance()
-        //$caseData.getData("situacao")=="FINALIZADO"
     then
         System.out.println("###FECHANDO O CASO:"+$caseData.getCaseId);
-
         //closeCase(String caseId, String comment) throws CaseNotFoundException;
         CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE);
         CaseService.closeCase($caseData.getCaseId,"CLOSED")
