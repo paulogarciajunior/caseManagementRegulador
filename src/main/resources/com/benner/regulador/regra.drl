@@ -51,6 +51,20 @@ rule "Testando o case file em drl"
         System.out.println("\tOUTPUT EMAIL:"+ $caseData.getData("emailTo"));
         
         retract($processInstance);
-    	
-    	
 end
+
+rule "Closing the case"
+    ruleflow-group "rgr:Regulador.Close"
+    dialect "mvel"
+    no-loop true
+    when
+    	//$processInstance: WorkflowProcessInstance()
+        $caseData : CaseFileInstance()
+        //$caseData.getData("situacao")=="FINALIZADO"
+    then
+        //closeCase(String caseId, String comment) throws CaseNotFoundException;
+        CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE);
+        String $caseId = (String) $caseData.getCaseId 
+        CaseService.closeCase($caseId,"CLOSED")
+end
+        
