@@ -31,7 +31,7 @@ rule "Testando o case file em drl"
 
         $processInstance.setVariable("emailTo","luiza.garcia@triopropaganda.com"));
         retract($processInstance);	    
-        System.out.println("\tINPUT EMAIL:"+ caseFile_emailTo.get();
+        System.out.println("\tOUTPUT EMAIL:"+ $caseData.getData("emailto")
         
     	
     	
