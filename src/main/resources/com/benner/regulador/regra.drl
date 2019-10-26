@@ -26,7 +26,8 @@ rule "Testando o case file em drl"
         System.out.println("\t"+$caseData.getCaseId());
         //System.out.println($caseData.getData());
         System.out.println("\tINPUT DESCRICAO:"+$controle.getNome());
-        System.out.println("\tINPUT EMAIL:"+$solicitante.getSolicitanteEmail());
+        //System.out.println("\tINPUT EMAIL:"+$solicitante.getSolicitanteEmail());
+        System.out.println("\tINPUT EMAIL:"+ $caseData.getData("emailTo")
 
 
         WorkflowProcessInstance $p = (WorkflowProcessInstance)kcontext.getKieRuntime().getProcessInstance($processInstance.getId()); //casting to WorkflowProcessInstance is essential
